@@ -1,6 +1,14 @@
 def hidden(matrix, n):
-    # Your implementation here!
-    pass
+    i = 0
+    strings = []
+
+    for tuple in matrix:
+        for string in tuple:
+            if i % n == 0:
+                strings.append(string)
+            i += 1
+
+    return ''.join(strings)
 
 matrix_1 = (
     ('u','e','r','e', ' ', 'e'),
